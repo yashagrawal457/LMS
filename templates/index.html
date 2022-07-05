@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    
+
+{% endblock %}
+
+
+{% block body %} 
+
+   <h1> Central Library Welcomes You </h1>
+    
+
+    {% if user  %}
+        <h1> HELLO  {{ user }}</h1>
+    {% endif %}
+
+    
+{% endblock %}

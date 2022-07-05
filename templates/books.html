@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="row">
+        {% for book in books %}
+            <div class="col-md-3 books"><img src="../static/images/{{book[0]}}.jpg" width="250" height="300"/>
+            <h3> {{book[1]}} </h3>
+            <p> {{book[2]}} </p>
+            {% if user %} 
+                <button class="btn btn-success"><a class="btn" href="/books/{{book[0]}}">CheckOut</a></button>
+            {%endif%}
+            </div>
+
+        {% endfor %}
+    </div>
+  
+
+    
+{% endblock %}
